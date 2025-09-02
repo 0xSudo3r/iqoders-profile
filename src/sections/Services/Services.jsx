@@ -121,7 +121,7 @@ function Services() {
             >
               <SpotlightCard
                 className="custom-spotlight-card h-full min-h-[380px] flex flex-col justify-between p-8"
-                spotlightColor="rgba(0, 229, 255, 0.2)"
+                spotlightColor="rgba(59, 31, 204, 0.6)"
               >
                 <div>
                   <div className="flex items-center justify-center w-16 h-16 bg-[#1E1830] rounded-xl mb-6">

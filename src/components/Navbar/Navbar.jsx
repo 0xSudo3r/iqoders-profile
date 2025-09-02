@@ -64,7 +64,7 @@ function Navbar() {
         {/* CTA button */}
         <div className="hidden md:block">
           <a
-            href="#get-started"
+            href="#contact"
             className="px-4 py-2 bg-[#5227FF] text-white rounded-xl shadow-md hover:bg-[#3B1FCC] transition"
           >
             Get Started

@@ -33,7 +33,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          Technology moves <span className="text-[#5227FF]">business</span>
+          Technology moves <span className="text-[rgb(82,39,255)]">business</span>
         </motion.h1>
 
         {/* Subheading */}
@@ -65,7 +65,7 @@ function Hero() {
         >
           <motion.a
             href="#contact"
-            className="px-6 py-3 bg-[#5227FF] text-white rounded-xl shadow-lg hover:bg-[#3B1FCC] transition text-sm sm:text-base"
+            className="px-6 py-3 bg-[#5227FF] text-white rounded-xl shadow-lg hover:bg-[#3b1ecc] transition text-sm sm:text-base"
             variants={{
               hidden: { opacity: 0, y: 20 },
               show: { opacity: 1, y: 0 },
