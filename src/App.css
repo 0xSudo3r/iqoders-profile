@@ -12,3 +12,7 @@
   background-color: oklch(13% 0.028 261.692);
   font-family: ubuntu-sans;
 }
+
+html {
+  scroll-behavior: smooth;
+}

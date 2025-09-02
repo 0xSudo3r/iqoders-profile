@@ -1,10 +1,9 @@
 import DotGrid from "./components/DotGrid/DotGrid";
 import { FaBrain, FaBolt, FaShieldAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-
 function Hero() {
   return (
-    <section className="hero-section relative min-h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="hero-section relative min-h-screen flex items-center justify-center text-center px-4 mb-5 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="hero-background absolute inset-0">
         <DotGrid
@@ -65,7 +64,7 @@ function Hero() {
           }}
         >
           <motion.a
-            href="#get-started"
+            href="#contact"
             className="px-6 py-3 bg-[#5227FF] text-white rounded-xl shadow-lg hover:bg-[#3B1FCC] transition text-sm sm:text-base"
             variants={{
               hidden: { opacity: 0, y: 20 },
@@ -75,7 +74,7 @@ function Hero() {
             Start Your Project
           </motion.a>
           <motion.a
-            href="#learn-more"
+            href="#services"
             className="px-6 py-3 border border-gray-400 text-white rounded-xl hover:bg-gray-200 hover:text-black transition text-sm sm:text-base"
             variants={{
               hidden: { opacity: 0, y: 20 },
