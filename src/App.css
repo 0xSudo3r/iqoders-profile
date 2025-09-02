@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: ubuntu-sans;
+  src: url(./assets/fonts/ubuntu-sans/ubuntu-sans.ttf);
+}
+
+#root {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: oklch(13% 0.028 261.692);
+  font-family: ubuntu-sans;
+}
