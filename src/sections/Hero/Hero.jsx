@@ -1,139 +1,57 @@
-import DotGrid from "./components/DotGrid/DotGrid";
-import { FaBrain, FaBolt, FaShieldAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
-function Hero() {
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Suspense } from "react";
+import RackModel from "./ReckModel";
+
+
+export default function Hero() {
   return (
-    <section className="hero-section relative min-h-screen flex items-center justify-center text-center px-4 mb-5 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background */}
-      <div className="hero-background absolute inset-0">
-        <DotGrid
-          dotSize={5}
-          gap={30}
-          baseColor="#271E37"
-          activeColor="#5227FF"
-          proximity={120}
-          shockRadius={250}
-          shockStrength={5}
-          resistance={750}
-          returnDuration={1.5}
-        />
-      </div>
-
-      {/* Text Content */}
-      <motion.div
-        className="hero-text max-w-5xl mt-7 w-full z-10"
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        {/* Main Heading */}
-        <motion.h1
-          className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight text-white"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          Technology moves <span className="text-[rgb(82,39,255)]">business</span>
-        </motion.h1>
-
-        {/* Subheading */}
-        <motion.p
-          className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
+    <section className="relative min-h-screen flex items-center justify-between px-10 bg-slate-900">
+      {/* Left Content */}
+      <div className="max-w-xl text-white space-y-6">
+        <h1 className="text-5xl font-bold leading-tight">
+          Technology moves <span className="text-violet-500">business</span>
+        </h1>
+        <p className="text-lg text-gray-300">
           iQoders helps you stay ahead with smart IT systems that are quick,
           safe, and easy to grow. Whether you move to the cloud, update old
           systems, or add more security, we give you the tools and support to
           keep moving forward with confidence.
-        </motion.p>
+        </p>
 
-        {/* Buttons */}
-        <motion.div
-          className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-4"
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            show: {
-              opacity: 1,
-              y: 0,
-              transition: { staggerChildren: 0.2 },
-            },
-          }}
-        >
-          <motion.a
-            href="#contact"
-            className="px-6 py-3 bg-[#5227FF] text-white rounded-xl shadow-lg hover:bg-[#3b1ecc] transition text-sm sm:text-base"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0 },
-            }}
-          >
+        <div className="flex gap-4">
+          <button className="px-6 py-3 bg-violet-600 hover:bg-violet-700 rounded-lg font-medium transition">
             Start Your Project
-          </motion.a>
-          <motion.a
-            href="#services"
-            className="px-6 py-3 border border-gray-400 text-white rounded-xl hover:bg-gray-200 hover:text-black transition text-sm sm:text-base"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { opacity: 1, y: 0 },
-            }}
-          >
+          </button>
+          <button className="px-6 py-3 border border-gray-400 rounded-lg hover:bg-gray-800 transition">
             Learn More
-          </motion.a>
-        </motion.div>
+          </button>
+        </div>
+      </div>
 
-        {/* Features Row */}
-        <motion.div
-          className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-gray-300 justify-items-center"
-          initial="hidden"
-          animate="show"
-          variants={{
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: { staggerChildren: 0.3 },
-            },
-          }}
-        >
-          {[
-            {
-              icon: <FaBrain className="text-4xl text-[#5227FF] mb-3" />,
-              title: "Smart Solutions",
-              desc: "AI-powered systems that adapt to your business needs.",
-            },
-            {
-              icon: <FaBolt className="text-4xl text-[#5227FF] mb-3" />,
-              title: "Lightning Fast",
-              desc: "Optimized performance for maximum efficiency.",
-            },
-            {
-              icon: <FaShieldAlt className="text-4xl text-[#5227FF] mb-3" />,
-              title: "Secure & Safe",
-              desc: "Enterprise-grade security for peace of mind.",
-            },
-          ].map((feature, idx) => (
-            <motion.div
-              key={idx}
-              className="flex flex-col items-center text-center"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: { opacity: 1, y: 0 },
-              }}
-            >
-              {feature.icon}
-              <h3 className="text-lg sm:text-xl font-semibold text-white">
-                {feature.title}
-              </h3>
-              <p className="mt-2 text-sm sm:text-base">{feature.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
+      {/* Right 3D Rack */}
+      <div className="w-[480px] h-[480px]">
+        <Canvas camera={{ position: [0, 2, 5.5], fov: 42 }}>
+          {/* Lighting setup */}
+          <ambientLight intensity={0.4} />
+          <directionalLight position={[5, 5, 5]} intensity={1.2} />
+          <directionalLight position={[-5, 5, -5]} intensity={0.8} />
+          <pointLight position={[0, 3, 2]} intensity={0.6} />
+          <spotLight
+            position={[0, 6, 6]}
+            angle={0.3}
+            intensity={1}
+            penumbra={0.5}
+            castShadow
+          />
+
+          <Suspense fallback={null}>
+            <RackModel />
+          </Suspense>
+
+          <OrbitControls enableZoom={false} autoRotate />
+        </Canvas>
+      </div>
     </section>
   );
 }
-
-export default Hero;
