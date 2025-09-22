@@ -8,7 +8,7 @@ function Counter({ target, duration }) {
   useEffect(() => {
     let start = 0;
     const end = parseInt(target.replace(/\D/g, ""), 10); // remove +, % etc.
-    const incrementTime = (duration * 1000) / end;
+    const incrementTime = (duration * 2000) / end;
 
     const timer = setInterval(() => {
       start += 1;
