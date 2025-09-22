@@ -8,7 +8,7 @@ export default function RackModel(props) {
     scene.traverse((child) => {
       if (child.isMesh) {
         // Change rack color to Tailwind gray-900 (#111827)
-        child.material.color.set("#111827");
+        child.material.color.set("#000000");
         child.material.metalness = 0.4; // a bit metallic
         child.material.roughness = 0.6; // softer reflection
       }
@@ -16,6 +16,6 @@ export default function RackModel(props) {
   }, [scene]);
 
   return (
-    <primitive object={scene} scale={1.5} position={[0, -1.5, 0]} {...props} />
+    <primitive object={scene} scale={1.4} position={[0, -1.5, 0]} {...props} />
   );
 }
