@@ -30,8 +30,8 @@ function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
         scrolled
-          ? "bg-[#271E37]/95 backdrop-blur-lg shadow-md"
-          : "bg-[#271E37]/50 backdrop-blur-lg"
+          ? "bg-primary/95 backdrop-blur-lg shadow-md"
+          : "bg-primary/50 backdrop-blur-lg"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
@@ -84,7 +84,7 @@ function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-[#271E37]/95 backdrop-blur-lg border-t border-white/10"
+            className="md:hidden bg-primary/95 backdrop-blur-lg border-t border-white/10"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

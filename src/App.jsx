@@ -9,7 +9,6 @@ import Contact from "./sections/Contact/Contact";
 function App() {
   return (
     <div className="min-h-screen">
-      <title>IQoders Tech</title>
       {/* Main Container */}
       <div className="mx-auto">
         <Navbar />
