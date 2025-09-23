@@ -20,12 +20,14 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-between lg:px-10 px-5 
-                 bg-gradient-to-br from-[#1a0b2e] via-[#2a1454] to-[#120826]"
+bg-gradient-to-br from-[#1a0b2e] via-[#2a1454] to-[#120826]"
     >
       {/* Left Content */}
       <div className="max-w-xl text-white space-y-6 lg:pl-32">
         <h1 className="text-5xl font-bold leading-tight">
-          Technology moves <span className="text-violet-400">business</span>
+          Technology moves <span className="bg-gradient-to-r  from-violet-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            business
+          </span>
         </h1>
         <p className="text-lg text-gray-300">
           iQoders helps you stay ahead with smart IT systems that are quick,
@@ -35,10 +37,10 @@ export default function Hero() {
         </p>
 
         <div className="flex gap-4">
-          <button className="px-6 py-3 bg-violet-600 hover:bg-violet-700 rounded-lg font-medium transition">
+          <button className="px-6 py-3 drop-shadow-[0_0_12px_rgba(139,92,246,0.7)] bg-white text-black hover:bg-gray-50 hover:border hover:drop-shadow-[0_0_12px_rgba(145,92,246,0.7)] border-gray-300 cursor-pointer rounded-2xl font-medium transition">
             Start Your Project
           </button>
-          <button className="px-6 py-3 border border-gray-400 rounded-lg hover:bg-violet-900/40 transition">
+          <button className="px-6 py-3 border border-gray-400  hover:bg-white rounded-xl hover:text-black transition">
             Learn More
           </button>
         </div>

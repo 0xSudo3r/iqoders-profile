@@ -40,7 +40,11 @@ function Navbar() {
           href="#"
           className="text-xl font-bold text-white flex items-center gap-2"
         >
-          <span className="text-[#5227FF]">iQoders</span> Tech
+          <img
+            src="/Logo_2.png"
+            alt="iQoders Logo"
+            className="h-38 w-38 object-contain"
+          />
         </a>
 
         {/* Desktop Menu */}
