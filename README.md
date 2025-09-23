@@ -1,3 +1,3 @@
 # IQoders-profile
 
-### Our Fuckn Cool Kali-Switch Portfolio
+### Our Fuckn Cool kill-Switch Portfolio
