@@ -30,8 +30,8 @@ function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
         scrolled
-          ? "bg-primary/95 backdrop-blur-lg shadow-md"
-          : "bg-primary/50 backdrop-blur-lg"
+          ? "bg-[#ff5061]/95 backdrop-blur-lg shadow-md"
+          : "bg-[#ff5061]/50 backdrop-blur-lg"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
@@ -41,8 +41,8 @@ function Navbar() {
           className="text-xl font-bold text-white flex items-center gap-2"
         >
           <img
-            src="/Logo_2.png"
-            alt="iQoders Logo"
+            src="/Logo.png"
+            alt="Killswitch Logo"
             className="h-38 w-38 object-contain"
           />
         </a>
@@ -57,7 +57,7 @@ function Navbar() {
             >
               <a
                 href={link.href}
-                className="hover:text-[#5227FF] transition-colors"
+                className="hover:text-[#ff5061] transition-colors"
               >
                 {link.name}
               </a>
@@ -69,7 +69,7 @@ function Navbar() {
         <div className="hidden md:block">
           <a
             href="#contact"
-            className="px-4 py-2 bg-[#5227FF] text-white rounded-xl shadow-md hover:bg-[#3B1FCC] transition"
+            className="px-4 py-2 bg-[#ff5061] text-white rounded-xl shadow-md hover:bg-[#ff5061]/90 transition"
           >
             Get Started
           </a>
@@ -88,7 +88,7 @@ function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-primary/95 backdrop-blur-lg border-t border-white/10"
+            className="md:hidden bg-[#ff5061]/95 backdrop-blur-lg border-t border-white/10"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -99,7 +99,7 @@ function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="hover:text-[#5227FF] transition-colors"
+                    className="hover:text-[#ff5061] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -108,7 +108,7 @@ function Navbar() {
               <li>
                 <a
                   href="#get-started"
-                  className="px-4 py-2 bg-[#5227FF] text-white rounded-xl shadow-md hover:bg-[#3B1FCC] transition"
+                  className="px-4 py-2 bg-[#ff5061] text-white rounded-xl shadow-md hover:bg-[#ff5061]/90 transition"
                 >
                   Get Started
                 </a>

@@ -8,7 +8,7 @@ import Contact from "./sections/Contact/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#0a0701] text-white">
       {/* Main Container */}
       <div className="mx-auto">
         <Navbar />

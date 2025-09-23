@@ -7,14 +7,14 @@ function Counter({ target, duration }) {
 
   useEffect(() => {
     let start = 0;
-    const end = parseInt(target.replace(/\D/g, ""), 10); // remove +, % etc.
+    const end = parseInt(target.replace(/\D/g, ""), 10);
     const incrementTime = (duration * 2000) / end;
 
     const timer = setInterval(() => {
       start += 1;
       if (start >= end) {
         clearInterval(timer);
-        setCount(target); // show final with + or %
+        setCount(target);
       } else {
         setCount(start);
       }
@@ -30,7 +30,7 @@ function About() {
   return (
     <section
       id="about"
-      className="relative py-20 text-white bg-[#1E1830] overflow-hidden"
+      className="relative py-20 text-white bg-[#0a0701] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
@@ -42,9 +42,9 @@ function About() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
-            About <span className="text-[#5227FF]">IQoders</span>
+            About <span className="text-[#ff5061]">Killswitch</span>
           </h2>
-          <p className="mt-6 text-lg text-gray-300">
+          <p className="mt-6 text-lg text-[#f4f4f9]">
             We are a team of passionate developers and technology experts
             dedicated to transforming businesses through innovative IT
             solutions.
@@ -62,8 +62,8 @@ function About() {
           <h3 className="text-2xl sm:text-3xl font-semibold mb-4">
             Empowering Businesses Through Technology
           </h3>
-          <p className="text-gray-300">
-            At IQoders, we believe that technology should be an enabler, not a
+          <p className="text-[#f4f4f9]">
+            At Killswitch, we believe that technology should be an enabler, not a
             barrier. Our mission is to bridge the gap between complex technical
             solutions and real business needs, delivering systems that are not
             just powerful, but also intuitive and scalable.
@@ -83,22 +83,22 @@ function About() {
         >
           {[
             {
-              icon: <FaUsers className="text-3xl text-[#5227FF]" />,
+              icon: <FaUsers className="text-3xl text-[#ff5061]" />,
               value: "50+",
               label: "Clients Served",
             },
             {
-              icon: <FaTasks className="text-3xl text-[#5227FF]" />,
+              icon: <FaTasks className="text-3xl text-[#ff5061]" />,
               value: "100+",
               label: "Projects Delivered",
             },
             {
-              icon: <FaClock className="text-3xl text-[#5227FF]" />,
+              icon: <FaClock className="text-3xl text-[#ff5061]" />,
               value: "5+",
               label: "Years Experience",
             },
             {
-              icon: <FaSmile className="text-3xl text-[#5227FF]" />,
+              icon: <FaSmile className="text-3xl text-[#ff5061]" />,
               value: "98%",
               label: "Client Satisfaction",
             },
@@ -115,14 +115,14 @@ function About() {
               <h4 className="mt-2 text-2xl font-bold">
                 <Counter target={stat.value} duration={2} />
               </h4>
-              <p className="text-gray-400 text-sm">{stat.label}</p>
+              <p className="text-[#f4f4f9]/80 text-sm">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>
 
         {/* Vision with Gradient Background */}
         <motion.div
-          className="mt-20 max-w-4xl mx-auto text-center bg-gradient-to-r from-[#5227FF] via-[#7C4DFF] to-[#5227FF] p-10 rounded-2xl shadow-xl"
+          className="mt-20 max-w-4xl mx-auto text-center bg-[#ff5061] p-10 rounded-2xl shadow-xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}

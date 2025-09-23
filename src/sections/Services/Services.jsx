@@ -12,7 +12,7 @@ import SpotlightCard from "./components/SpotlightCard/SpotlightCard";
 function Services() {
   const services = [
     {
-      icon: <FaCloud className="text-4xl text-[#5227FF]" />,
+      icon: <FaCloud className="text-4xl text-[#ff5061]" />,
       title: "Cloud Migration",
       desc: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",
       points: [
@@ -23,7 +23,7 @@ function Services() {
       ],
     },
     {
-      icon: <FaShieldAlt className="text-4xl text-[#5227FF]" />,
+      icon: <FaShieldAlt className="text-4xl text-[#ff5061]" />,
       title: "Cybersecurity",
       desc: "Protect your business with comprehensive security solutions and threat monitoring.",
       points: [
@@ -34,7 +34,7 @@ function Services() {
       ],
     },
     {
-      icon: <FaRedo className="text-4xl text-[#5227FF]" />,
+      icon: <FaRedo className="text-4xl text-[#ff5061]" />,
       title: "Legacy Modernization",
       desc: "Transform outdated systems into modern, efficient, and maintainable solutions.",
       points: [
@@ -45,7 +45,7 @@ function Services() {
       ],
     },
     {
-      icon: <FaMobileAlt className="text-4xl text-[#5227FF]" />,
+      icon: <FaMobileAlt className="text-4xl text-[#ff5061]" />,
       title: "Mobile Development",
       desc: "Create powerful mobile applications that deliver exceptional user experiences.",
       points: [
@@ -56,7 +56,7 @@ function Services() {
       ],
     },
     {
-      icon: <FaCogs className="text-4xl text-[#5227FF]" />,
+      icon: <FaCogs className="text-4xl text-[#ff5061]" />,
       title: "DevOps & Automation",
       desc: "Streamline your development process with CI/CD pipelines and automation tools.",
       points: [
@@ -67,7 +67,7 @@ function Services() {
       ],
     },
     {
-      icon: <FaLightbulb className="text-4xl text-[#5227FF]" />,
+      icon: <FaLightbulb className="text-4xl text-[#ff5061]" />,
       title: "IT Consulting",
       desc: "Strategic technology consulting to align IT initiatives with business objectives.",
       points: [
@@ -80,7 +80,7 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="relative py-20 bg-[#1E1830] text-white">
+    <section id="services" className="relative py-20 bg-[#0a0701] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <motion.div
@@ -91,9 +91,9 @@ function Services() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
-            Our <span className="text-[#5227FF]">Services</span>
+            Our <span className="text-[#ff5061]">Services</span>
           </h2>
-          <p className="mt-6 text-lg text-gray-300">
+          <p className="mt-6 text-lg text-[#f4f4f9]">
             Comprehensive IT solutions designed to accelerate your business
             growth and digital transformation journey.
           </p>
@@ -121,22 +121,22 @@ function Services() {
             >
               <SpotlightCard
                 className="custom-spotlight-card h-full min-h-[380px] flex flex-col justify-between p-8"
-                spotlightColor="rgba(59, 31, 204, 0.6)"
+                spotlightColor="rgba(255, 80, 97, 0.6)"
               >
                 <div>
-                  <div className="flex items-center justify-center w-16 h-16 bg-[#1E1830] rounded-xl mb-6">
+                  <div className="flex items-center justify-center w-16 h-16 bg-[#0a0701] rounded-xl mb-6">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-4">{service.desc}</p>
+                  <p className="text-[#f4f4f9]/80 text-sm mb-4">{service.desc}</p>
                 </div>
 
-                <ul className="space-y-2 text-sm text-gray-300">
+                <ul className="space-y-2 text-sm text-[#f4f4f9]">
                   {service.points.map((point, i) => (
                     <li key={i} className="flex items-center gap-2">
-                      <span className="w-2 h-2 bg-[#5227FF] rounded-full"></span>
+                      <span className="w-2 h-2 bg-[#ff5061] rounded-full"></span>
                       {point}
                     </li>
                   ))}
